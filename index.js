@@ -3,6 +3,7 @@ const app = express();
 const axios = require("axios");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
@@ -49,4 +50,4 @@ app.get("/weather", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("listening on port 5000"));
+app.listen(PORT, () => console.log("listening on port"));
